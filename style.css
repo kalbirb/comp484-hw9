@@ -1,0 +1,20 @@
+h1{
+    background: lightgray;
+}
+
+#dateOutput {
+  background: pink;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+#numberConversionOutput {
+  background: lightgreen;
+  padding: 20px;
+  border-radius: 10px;
+}
+#mathOutput {
+  background: lightblue;
+  padding: 20px;
+  border-radius: 10px;
+}
