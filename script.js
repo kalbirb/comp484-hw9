@@ -73,7 +73,7 @@ var num3String = "Original: " + str1 + " -> Converted:" + converted3 + " -> isNa
 // TODO:
 // 4. Combine all your results into ONE string
 //    (you can use + to join multiple strings)
-var outputPt2 = "<h3>" + num1String + "<br>" + num2String + "<br>" + num2String + "</h3>";
+var outputPt2 = "<h3>" + num1String + "<br>" + num2String + "<br>" + num3String + "</h3>";
 // TODO:
 // 5. Display the final result inside the element:
 //    id="numberConversionOutput"
@@ -87,28 +87,32 @@ document.getElementById("numberConversionOutput").innerHTML = outputPt2;
 // Grade Calculator
 // 1. Create at least 2-3 numeric variables
 //
-var testMCQ;
-var testFRQ;
-var testTwo;
-var testThree;
+var testMCQ = 30;
+var testFRQ = 40;
+var testTwo = 70;
+var testThree = 80;
 var gradeTotal;
 // 2. Perform calculations:
 //    - at least one addition
 gradeTotal = testMCQ + testFRQ;
+gradeTotal += testTwo + testThree;
 //    - at least one other operation (subtract, multiply, or divide)
 //
-gradeTotal += testTwo + testThree;
-gradeTotal /= 3; // Average Calculation based on number of Tests.
+var gradeAvg = gradeTotal / 3; // Average Calculation based on number of Tests.
 // 3. Use at least ONE of the following:
 //    - toFixed()
 //    - toLocaleString()
 //    - Number.parseInt()
 //    - Number.parseFloat()
 //
+gradeAvg = gradeAvg.toFixed(2);
 // 4. Build a string showing your results
 //
+var outputPt3 = "<h3> Addition " + testMCQ.toFixed() + "+" + testFRQ.toFixed() + 
+                "<br> Division " + gradeTotal + "/" + "3" + 
+                "<br> Grade Average " + gradeAvg + "</h3>";
 // 5. Display the results inside the element with id="mathOutput"
-
+document.getElementById("mathOutput").innerHTML = outputPt3;
 // ==========================
 // Part 4: Conditionals
 // ==========================
@@ -123,3 +127,14 @@ gradeTotal /= 3; // Average Calculation based on number of Tests.
 //
 // 2. Display a message on the page based on the condition
 //    (append it to an existing section or create a new message)
+if(gradeAvg > 70){
+    document.getElementById("mathOutput").innerHTML += "<h2> You passed </h2>";
+}else{
+    document.getElementById("mathOutput").innerHTML += "<h2> You failed </h2>";
+}
+
+if (Number.isInteger(str1)) {
+    document.getElementById("numberConversionOutput").innerHTML += "<h2>" + str1 + " is a Number </h2>";
+} else {
+    document.getElementById("numberConversionOutput").innerHTML += "<h2>" + str1 + " is not a Number </h2>";
+}
