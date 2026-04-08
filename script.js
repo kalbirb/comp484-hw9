@@ -27,10 +27,10 @@ document.getElementById("dateOutput").innerHTML = outputPt1;
 // TODO:
 // 1. Create at least 4 separate variables:
 //    - at least 2 numeric strings (example: "42")
-var num1 = 67;
-var num2 = 21;
+var num1 = "67";
+var num2 = "21";
 //    - at least 1 decimal string (example: "19.75")
-var dec1 = 3.14;
+var dec1 = "3.14";
 //    - at least 1 non-numeric string (example: "hello")
 var str1 = "hello";
 // TODO:
@@ -39,23 +39,23 @@ var str1 = "hello";
 //    a. Convert the value using Number()
 var converted1 = Number(num1);
 //    b. Check if it is NaN using Number.isNaN()
-var bool1 = Number.isNaN(num1);
+var bool1 = Number.isNaN(converted1);
 //    c. Check if it is an integer using Number.isInteger()
-var isInt1 = Number.isInteger(num1);
+var isInt1 = Number.isInteger(converted1);
 
 //    a. Convert the value using Number()
 var converted2 = Number(num2);
 //    b. Check if it is NaN using Number.isNaN()
-var bool2 = Number.isNaN(num2);
+var bool2 = Number.isNaN(converted2);
 //    c. Check if it is an integer using Number.isInteger()
-var isInt2 = Number.isInteger(num2);
+var isInt2 = Number.isInteger(converted2);
 
 //    a. Convert the value using Number()
 var converted3 = Number(str1);
 //    b. Check if it is NaN using Number.isNaN()
-var bool3 = Number.isNaN(str1);
+var bool3 = Number.isNaN(converted3);
 //    c. Check if it is an integer using Number.isInteger()
-var isInt3 = Number.isInteger(str1);
+var isInt3 = Number.isInteger(converted3);
 
 // TODO:
 // 3. For EACH value, create a sentence showing:
